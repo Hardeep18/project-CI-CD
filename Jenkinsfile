@@ -13,10 +13,6 @@ node {
 
            sh 'docker-compose up  --build -d' 
             /*sh 'docker build -t test . '*/
-    }
-    stage('Docker clean') {
-       
-         sh 'docker rmi $(docker images -q -f dangling=true)'
-       }
+    }   
 }
 

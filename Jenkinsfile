@@ -11,6 +11,7 @@
        steps {
          sh 'docker-compose up --build -d'
        }
+     }
       stage('Clear unused docker images') {
        agent any
        steps {

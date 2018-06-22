@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line. */
 
-           sh 'docker-compose up -d --build' 
+           sh 'docker-compose up  --build' 
             /*sh 'docker build -t test . '*/
     }
 }

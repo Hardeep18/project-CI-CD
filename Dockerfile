@@ -6,5 +6,5 @@ RUN apt-get install apache2 -y
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
 COPY index.html /var/www/html/index.html
-EXPOSE 80
-CMD ["/usr/sbin/apache2","-D","FOREGROUND"]
+ADD start.sh /start.sh
+CMD ["/bin/bash","/start.sh"]

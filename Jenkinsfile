@@ -18,10 +18,15 @@ node {
         /* This builds the actual image; synonymous to
           * docker build on the command line. */
 
-           sh  """
-           docker rmi $(docker images -q -f dangling=true)
-           echo clear all unused images
-           """
+       */    sh  """
+           /*docker rmi $(docker images -q -f dangling=true)
+           *echo clear all unused images*/
+          
+        sh """
+        docker rmi $(docker images -q -f dangling=true)
+        echo clear all unused images
+                    
+        """
     }
     
 }

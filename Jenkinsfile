@@ -19,7 +19,7 @@ node {
           * docker build on the command line. */
 
            /*sh 'docker rmi $(docker images -q -f dangling=true)'*/
-        sh 'kubectl get service'
+            sh 'kubectl get nodes'
     }
     
 }

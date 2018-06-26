@@ -11,15 +11,15 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line. */
 
-           /*sh 'docker-compose up --build -d'*/
-            sh 'docker build -t test .'
+           sh 'docker-compose up --build -d'
+            /*sh 'docker build -t test .'*/
     }
     stage('Build clean') {
         /* This builds the actual image; synonymous to
           * docker build on the command line. */
 
            /*sh 'docker rmi $(docker images -q -f dangling=true)'*/
-            sh 'kubectl run nginx --image=nginx'
+            /*sh 'kubectl run nginx --image=nginx'*/
     }
     
 }

@@ -18,7 +18,8 @@ node {
         /* This builds the actual image; synonymous to
           * docker build on the command line. */
 
-           sh 'docker rmi $(docker images -q -f dangling=true)'
+           /*sh 'docker rmi $(docker images -q -f dangling=true)'*/
+        sh 'kubectl get service'
     }
     
 }

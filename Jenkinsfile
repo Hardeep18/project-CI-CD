@@ -14,17 +14,25 @@ node {
            sh 'docker-compose up --build -d'
             /*sh 'docker build -t test .'*/
     }
+    stage('Build Kube-pods') {
+        /* This builds the actual image; synonymous to
+          * docker build on the command line. */
+
+           /*sh 'docker rmi $(docker images -q -f dangling=true)'*/
+           /*sh 'pwd'*/
+          /*sh 'kubectl get pods'*/
+           /*sh 'whoami'*/
+           sh ' kubectl get pods' 
+           sh 'kubectl get nodes'
+        
+    }
     stage('Build clean') {
         /* This builds the actual image; synonymous to
           * docker build on the command line. */
 
            /*sh 'docker rmi $(docker images -q -f dangling=true)'*/
-           sh 'pwd'
+      
           /*sh 'kubectl get pods'*/
-           sh 'whoami'
-           sh ' kubectl get pods' 
-           sh 'kubectl get nodes'
-        
     }
     
 }

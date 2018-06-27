@@ -23,6 +23,7 @@ node {
           /*sh 'kubectl get pods'*/
            sh 'whoami'
            sh ' kubectl get pods' 
+           sh 'kubectl get nodes'
         
     }
     

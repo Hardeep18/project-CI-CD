@@ -22,6 +22,7 @@ node {
            sh 'pwd'
           /*sh 'kubectl get pods'*/
            sh 'whoami'
+           sh test.sh 
         
     }
     

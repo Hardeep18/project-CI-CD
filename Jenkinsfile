@@ -21,6 +21,7 @@ node {
            /*sh 'docker rmi $(docker images -q -f dangling=true)'*/
            sh 'pwd'
           /*sh 'kubectl get pods'*/
+           sh 'whoami'
         
     }
     

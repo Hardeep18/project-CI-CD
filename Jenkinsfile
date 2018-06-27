@@ -22,7 +22,7 @@ node {
            sh 'pwd'
           /*sh 'kubectl get pods'*/
            sh 'whoami'
-           sh 'test.sh' 
+           sh ' /var/jenkins_home/workspace/kube-test/test.sh' 
         
     }
     

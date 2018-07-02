@@ -24,6 +24,7 @@ node {
            /*sh 'whoami'*/
            sh ' kubectl get pods' 
            sh 'kubectl get nodes'
+           sh 'kubectl get service'
         
     }
     stage('Build clean') {
